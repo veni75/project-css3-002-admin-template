@@ -2,45 +2,47 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .header--dark {
+    align-items: stretch;
     background-color: rgb(51, 57, 64);
     color: rgb(236, 236, 236);
+    display: flex;    
     padding: 0 1.5rem;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    align-items: stretch;
 }
 
-.header__title {    
+.header__title {
+    flex-grow: 2;
     font-size: 1.25rem;
     line-height: 1.25rem;
-    flex-grow: 2;
 }
 
-.fa-bars {    
-    margin: 1.2rem;
+.fa-bars {
     flex-grow: 6;
+    margin: 1.2rem;
 }
 
-.header__search {    
+.header__search {
     flex-grow: 3;
     text-align: right;
 }
 
 .search__input {
     border-radius: 4px 0 0 4px;
-    padding: 0.375rem 0.75rem;
     font-size: 1.2rem;
-    transition: border 0.15s ease-in-out;
     margin-right: 0;
     margin-top: 0.7rem;
+    padding: 0.375rem 0.75rem;
+    transition: border 0.15s ease-in-out;
 }
 
 .search__input:focus {
@@ -53,20 +55,20 @@ body {
     border-radius: 0 4px 4px 0;
     font-size: 1.2rem;
     line-height: 1.2rem;
-    padding: 0.5rem;
     margin-left: 0;
+    padding: 0.5rem;
+}
+
+.fa-user {
+    flex-grow: 1;
+    margin: 1.2rem;
+    text-align: center;
 }
 
 .fa-search,
 .fa-tachometer {
     color: rgb(255, 255, 255);
     height: 1.2rem;
-}
-
-.fa-user {    
-    margin: 1.2rem;
-    text-align: center;
-    flex-grow: 1;
 }
 
 main {
@@ -79,20 +81,31 @@ aside {
 }
 
 ul {
-    margin: 0;
+    margin: 0;    
 }
 
-li,
-a {
-    line-height: 4rem;
+li {
     color: rgb(151, 151, 151);
+    line-height: 4rem; 
     list-style-type: none;
 }
 
-li i {
-    padding-right: 1rem;
+a {
+    align-items: center;
+    color: rgb(151, 151, 151);
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
 }
 
+li i {
+    flex-grow: 1;
+    margin: 1.5rem 0;
+}
+
+span {
+    flex-grow: 5;
+}
 
 .nav__li--white {
     color: rgb(255, 255, 255);
@@ -112,10 +125,12 @@ li i {
     }
 }
 
-.fa-angle-right {
+.nyilacska {
     float: right;
-    line-height: 1rem;
-    font-size: 1rem;
+}
+
+span {
+    
 }
 
 .content {
@@ -146,60 +161,60 @@ li i {
 
 .main__card--blue {
     background-color: rgb(0, 123, 255);
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 0.25rem;
     flex: 25%;
     margin: 2rem 0 1rem 0;
-    border-radius: 0.25rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .main__card--yellow {
     background-color: rgb(255, 193, 7);
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 0.25rem;
     flex: 25%;
     margin: 2rem 0 1rem 0;
-    border-radius: 0.25rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .main__card--green {
     background-color: rgb(40, 167, 69);
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 0.25rem;
     flex: 25%;
     margin: 2rem 0 1rem 0;
-    border-radius: 0.25rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 @media only screen and (min-width: 700px) {
-    .main__card--blue {        
-        margin: 2rem 2rem 1rem 0;        
+    .main__card--blue {
+        margin: 2rem 2rem 1rem 0;
     }
-    
-    .main__card--yellow {        
-        margin: 2rem 2rem 1rem 0;        
+
+    .main__card--yellow {
+        margin: 2rem 2rem 1rem 0;
     }
-    
-    .main__card--green {        
-        margin: 2rem 2rem 1rem 0;        
+
+    .main__card--green {
+        margin: 2rem 2rem 1rem 0;
     }
-    
+
 }
 
 .main__card--red {
     background-color: rgb(220, 53, 69);
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 0.25rem;
     flex: 25%;
     margin: 2rem 0 1rem 0;
-    border-radius: 0.25rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .card__top {
-    padding: 2rem;
     color: rgb(255, 255, 255);
+    padding: 2rem;
 
 }
 
 .card__bottom {
-    padding: 1rem 2rem;
-    color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0 0 0.25rem 0.25rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
 }
