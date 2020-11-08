@@ -128,7 +128,7 @@ span {
     }
 }
 
-.nyilacska {
+.card__bottom--icon {
     float: right;
 }
 
@@ -194,7 +194,6 @@ span {
     .main__card--green {
         margin: 2rem 2rem 1rem 0;
     }
-
 }
 
 .main__card--red {
@@ -208,7 +207,6 @@ span {
 .card__top {
     color: rgb(255, 255, 255);
     padding: 2rem;
-
 }
 
 .card__bottom {
